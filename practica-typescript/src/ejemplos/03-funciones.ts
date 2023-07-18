@@ -41,7 +41,6 @@ interface prGame{
     name:string;
     edad: number;
     puntos: number;
-    casa: String;
     verPuntos:() => void;
 }
 
@@ -53,6 +52,15 @@ const aumentarEdad = ( personaGame: prGame, puntosSumar:number) => {
     const Zelda: prGame = {
         name: 'Link',
         edad: 33,
+        puntos: 10,
+        verPuntos(){
+            console.log(`Puntos recaudados en el juego ${ this.puntos }`)
+        }
+    }
+
+    const Link: prGame = {
+        name: 'Zelda',
+        edad: 64,
         puntos: 10,
         verPuntos(){
             console.log(`Puntos recaudados en el juego ${ this.puntos }`)
